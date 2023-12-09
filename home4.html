@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Tour Of China</title>
 <link href="index.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 <body>
-<div class="nav" style="border:1px solid black;padding-bottom:100px;padding-right:50px;">
+<div class="nav">
     <ul>
         <li><a>Home</a></li>
-        <li><a>Destinations</a></li>
-        <li><a>Stories<a></li>
-        <li><a>Contact Service</a></li>
+        <li><a onclick="location1()">Destinations</a></li>
+        <li><a onclick="location2()">Stories<a></li>
+        <li><a onclick="location3()">Contact Service</a></li>
     </ul>
 </div>
-<div class="main" style="border:1px solid yellow">
-    <h1 onclick="changecolor()" class="A">Discover The Best Of China</h1>
+<div class="main">
+    <h1>Discover The Best Of China</h1>
     <p>China. The name alone makes you want to get packing. It's going places, so jump aboard, go along for the ride and see where it's headed <span class="arrow-right"><a onclick="destinations()">&rarr; </a></span></p>
 </div>
-<div class="grid-container">
-        <div class="grid-item"><img src="images/beijing.jpg"></div>
-        <div class="grid-item"><img src="images/shanghai.jpg"></div>
-        <div class="grid-item"><img src="images/nanjing.jpg"></div>
+<div>
+<div class="destinations" id="destinations">
+    <h1>Destinations</h1>
+    <div class="grid-container">
+            <div class="grid-item"><img src="images/beijing.jpg"></div>
+            <div class="grid-item" ><img src="images/shanghai.jpg"></div>
+            <div class="grid-item"><img src="images/nanjing.jpg"></div>
+    </div>
+</div>
+<div id="stories">
+    <h1>Stories</h1>
+    <p id="test">Striking the perfect balance between tradition and modernity, China is where antiquity and heritage meet 21st-century innovation and lighting-fast development.</p>
+    <div id="video">
+        <video controls="controls" width="600" height="350" name="Video Name">
+            <source src="videos/video1.mov">
+        </video>
+    </div>
 </div>
 <script>
     //the function to scroll page to the part of cities.
     function destinations(){
         $('html, body').animate({
-        scrollTop: $(".grid-container").offset().top
+        scrollTop: $(".destinations").offset().top
         }, 1000);
     }
 
-    function changecolor(){
-        var h1=document.getElementsByClassName("A");
-        h1[0].style="color:green";
+    function location1(){
+        var element=document.getElementById("destinations");
+        element.scrollIntoView({behavior: 'smooth'});
+    }
+    function location2(){
+        var element=document.getElementById("stories");
+        element.scrollIntoView({behavior: 'smooth'});
     }
 </script>
 </body>

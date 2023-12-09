@@ -15,6 +15,10 @@ ul>li{
     color:white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+ul>li:hover{
+    color:grey;
+}
 .main{
     color:white;
     text-align:center;
@@ -27,6 +31,7 @@ ul>li{
 .main>p{
     font-size:2em;
 }
+
 .arrow-right :hover{
      padding-left:0.1em;
 }
@@ -38,6 +43,36 @@ ul>li{
     padding: 10px;
     column-gap: 1em;
 }
+
+.destinations{
+    color:white;
+    text-align:center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.destinations>h1{
+    font-size:4em;
+}
+
+#stories{
+    margin-top:8em;
+    color:white;
+    text-align:center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+}
+#stories>p{
+    margin-left:10em;
+    margin-right:10em;
+    font-size:2em;
+}
+#stories>h1{
+    margin-left:10px;
+    font-size:4em;
+}
+#stories>#video{
+    text-align:center;
+}
+
+
 
 img{
     object-fit: cover;
