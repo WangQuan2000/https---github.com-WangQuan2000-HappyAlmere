@@ -68,8 +68,24 @@ ul>li:hover{
     margin-left:10px;
     font-size:4em;
 }
+
 #stories>#video{
     text-align:center;
+}
+#contact{
+    margin-top:8em;
+    color:white;
+    text-align:center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+}
+#contact>p{
+    margin-left:10em;
+    margin-right:10em;
+    font-size:2em;
+}
+#contact>h1{
+    margin-left:10px;
+    font-size:4em;
 }
 
 
@@ -77,4 +93,9 @@ ul>li:hover{
 img{
     object-fit: cover;
     width:100%;
+}
+
+#fullname #email #messgae{
+    margin:8px 0;
+    padding:8px;
 }

@@ -4,6 +4,14 @@
 <title>Tour Of China</title>
 <link href="index.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+    (function(){
+       emailjs.init("_BcO2BtiB7JLxFZAR");
+    })();
+ </script>
 </head>
 <body>
 <div class="nav">
@@ -36,8 +44,20 @@
         </video>
     </div>
 </div>
+<div id="contact">
+    <h1>Contact Service</h1>
+    <p>Contact us if you have any needs.</p>
+    <div> 
+            <input type="text" name="fullname" id="fullname" placeholder="fullname" required/><br/>
+            <input type="text" name="email" id="email" placeholder="email" required/><br/>
+            <textarea name="message" id="message" required></textarea><br/>
+            <button onclick="sendEmail()">Send</button>   
+    </div>
+</div>
 <script>
-    //the function to scroll page to the part of cities.
+    function f1(){
+        var g=document.getElementById()
+    }
     function destinations(){
         $('html, body').animate({
         scrollTop: $(".destinations").offset().top
@@ -52,6 +72,15 @@
         var element=document.getElementById("stories");
         element.scrollIntoView({behavior: 'smooth'});
     }
+        function sendEmail() {
+            var param={
+                from_name: document.getElementById("fullname").nodeValue,
+                email_id: document.getElementById("email").nodeValue,
+                message: document.getElementById("message").nodeValue
+            }
+            emailjs.send("service_ob1ca84","template_9j7bad4",param);
+        }
 </script>
+
 </body>
 </html>
