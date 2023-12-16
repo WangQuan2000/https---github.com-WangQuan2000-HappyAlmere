@@ -95,7 +95,33 @@ img{
     width:100%;
 }
 
-#fullname #email #messgae{
+input{
+    text-align:center;
+    width:200px;
+    height:30px;
+    border-radius: 10px;
+    border:none;
     margin:8px 0;
-    padding:8px;
+    padding:4px;
+}
+
+textarea{
+    text-align:center;
+    width:300px;
+    height:60px;
+    border-radius: 10px;
+    border:none;
+    margin:8px 0;
+    padding:4px;
+}
+
+#mybtn{
+    text-align:center;
+    width:150px;
+    height:40px;
+    border-radius: 10px;
+    border:none;
+    padding:4px;
+    background-color:bisque;
+    margin-bottom:50px;
 }

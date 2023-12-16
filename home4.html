@@ -48,10 +48,11 @@
     <h1>Contact Service</h1>
     <p>Contact us if you have any needs.</p>
     <div> 
-            <input type="text" name="fullname" id="fullname" placeholder="fullname" required/><br/>
-            <input type="text" name="email" id="email" placeholder="email" required/><br/>
-            <textarea name="message" id="message" required></textarea><br/>
-            <button onclick="sendEmail()">Send</button>   
+            <input type="text" name="fullname" id="fullname" placeholder="fullname" required/><br/><br>
+            <input type="text" name="email" id="email" placeholder="email" required/><br/><br>
+            <textarea name="message" id="message" placeholder="message" required></textarea><br/><br>
+            <button onclick="sendEmail()" id="mybtn">Send</button>   <br>
+            <span id="confirm" style="display:none">Thank you for your message</span>
     </div>
 </div>
 <script>
@@ -72,14 +73,20 @@
         var element=document.getElementById("stories");
         element.scrollIntoView({behavior: 'smooth'});
     }
-        function sendEmail() {
-            var param={
-                from_name: document.getElementById("fullname").nodeValue,
-                email_id: document.getElementById("email").nodeValue,
-                message: document.getElementById("message").nodeValue
-            }
-            emailjs.send("service_ob1ca84","template_9j7bad4",param);
+    function location3(){
+        var element=document.getElementById("contact");
+        element.scrollIntoView({behavior: 'smooth'});
+    }
+    function sendEmail() {
+        var param={
+            from_name: document.getElementById("fullname").value,
+            email_id: document.getElementById("email").value,
+            message: document.getElementById("message").value
         }
+        emailjs.send("service_ob1ca84","template_yktb0gv",param);
+        console.log(param);
+        document.getElementById("confirm").style="display:block";
+    }
 </script>
 
 </body>
